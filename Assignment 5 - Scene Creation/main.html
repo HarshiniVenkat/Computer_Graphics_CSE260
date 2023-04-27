@@ -1,0 +1,29 @@
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Assignment 5 - Three.js</title>
+
+      <script  type="importmap">{
+        "imports": {
+          "three": "https://threejs.org/build/three.module.js",
+          "three/addons/": "https://threejs.org/examples/jsm/"
+        }
+      }</script>
+
+      <script src="build/three.min.js"></script>
+
+      <script type="module">
+        import { OrbitControls } from './build/OrbitControls.js';
+        import * as THREE from './build/three.module.js';
+        import { MTLLoader } from './build/MTLLoader.js';
+        import { OBJLoader } from './build/OBJLoader.js';
+     </script>
+
+      <script type="module" src="./main.js"></script>
+
+    </head>
+    <body>
+      <canvas id="myCanvas" width="500" height="500"></canvas>
+    </body>
+    </html>

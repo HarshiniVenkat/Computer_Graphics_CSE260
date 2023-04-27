@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 4</title>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <script src="Camera.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="asg4.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/webgl-utils.js"></script>
+
+
+  </head>
+
+  <body onload="main()">
+
+    <h1> Perry the Platypus in Machu Picchu Treasure Island</h1>
+    <canvas id="webgl" width="500" height="500">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id="fps"></p>
+    <p> Performance Optimization: The code initialises the buffer only once and the values are overriden every call. 
+      The renderfaster() function passes the triangle vertices as a whole list which makes the cubes generate much much faster. 
+      Avoided redundant code when it could be re-used.</p>
+    <br>
+    <input type="button" value="Show Agent Perry" onclick="showPerry()">
+    <input type="button" value="Animate Agent Perry" onclick="startAnimation()">
+    </br><br>
+    <input type="button" value="Stop Animation" onclick="stopAnimation()">
+    <input type="button" value="Hide Agent Perry" onclick="hidePerry()"></br></br>
+  
+    <div>
+      <label for="Camera">Camera Angle</label>
+      <input type="range" id="CameraAngle" name="CameraAngle" min="1" max="360" value="0">
+      <br><br>
+      <input type="button" id="normal_on" value="Normal ON" onclick="">
+      <input type="button" id="normal_off" value="Normal OFF" onclick="">
+      <br>
+      <p>
+      Light X <input type="range" id="LightX" name="LightX" min="-25" max="25" value="0">
+      Light Y <input type="range" id="LightY" name="LightY" min="-25" max="25" value="0">
+      Light Z<input type="range" id="LightZ" name="LightZ" min="-25" max="25" value="0">
+      </p>
+      <input type="button" id="light_on" value="Light ON" onclick="">
+      <input type="button" id="light_off" value="Light OFF" onclick="">
+      <br><br>
+      <label>Change Light Color</label><br>
+      Red <input type="range" min="0" max="255" value="255" class="slider" id="red"><br>
+      Green <input type="range" min="0" max="255" value="255" class="slider" id="green"><br>
+      Blue <input type="range" min="0" max="255" value="255" class="slider" id="blue">
+      <br><br>
+      <label for="Key Controls">Key Controls:</label><br>
+      <label for="Q">Q = Rotate Left</label><br>
+      <label for="E">E = Rotate Right</label><br>
+      <label for="W">W = Zoom In</label><br>
+      <label for="S">S = Zoom Out</label><br>
+      <label for="A">A = Move Left</label><br>
+      <label for="Q">D = Move Right</label><br>
+      <label for="Up">Arrow Up = Upward</label><br>
+      <label for="Down">Arrow Down = Downward</label>
+
+    </div>
+    
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 1</title>
+    <script src="asg2.js"></script>
+    <script src="Cube.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+  </head>
+
+  <body onload="main()">
+
+    <h1> Perry the Platypus</h1>
+    <canvas id="webgl" width="500" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id="fps"></p>
+    <p> Performance Optimization: The code initialises the buffer only once and the values are overriden every call</p>
+    <br>
+    <input type="button" value="STOP Animation" onclick="stopAnimation()">
+    <input type="button" value="ANIMATE Perry the Platypus" onclick="startAnimation()">
+    </br><br>
+    <input type="button" value="Make Perry Swim" onclick="Swim()">
+    <input type="button" value="Stop Perry Swim" onclick="stopSwim()"></br></br>
+  
+    <div>
+      <label for="Camera">Camera Angle</label>
+      <input type="range" id="CameraAngle" name="CameraAngle" min="1" max="360" value="0">
+      <br><br>
+      <label for="Leg">Move Leg (the green part moves to the sides)</label>
+      <input type="range" id="legmovement" name="legmovement" min="0" max="30" value="0">
+      <br><br>
+      <label for="Feet">Move Feet (the orange part goes up and down)</label>
+      <input type="range" id="feetmovement" name="feetmovement" min="0" max="30" value="0">
+      <br><br>
+      <label for="OpenBill">Open Bill</label>
+      <input type="button" value="ON" onclick="OpenBillON()">
+      <input type="button" value="OFF" onclick="OpenBillOFF()">
+      <br><br>
+      <label for="EvilEye">Evil Eye</label>
+      <input type="button" value="ON" onclick="EvilEyeON()">
+      <input type="button" value="OFF" onclick="EvilEyeOFF()">
+      <br><br>
+      <label for="HeadRotate">Want a Snack?</label>
+      <input type="button" value="YES" onclick="WantSnack()">
+      <input type="button" value="No Thanks" onclick="DoNothing()">
+      <br><br>
+      <label for="ShiftClick">Shift + Click the Canvas to see a Happy Perry</label>
+
+    </div>
+
+  </body>
+</html>
